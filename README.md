@@ -14,3 +14,5 @@ wget https://raw.githubusercontent.com/simdjson/simdjson/master/singleheader/sim
 wget https://raw.githubusercontent.com/simdjson/simdjson/master/singleheader/simdjson.cpp 
 make
 ~~~
+
+- [Test code](./simple_dedup_test.ipynb)
