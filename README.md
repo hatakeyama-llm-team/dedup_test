@@ -22,9 +22,7 @@ make
 - デフォルトでは､Streamingでdownloadする仕様になっています｡
 - ついでに､BERTopicでclassifyもしておきます
     - [こちらのnotebookでモデルはtrainしておきます](./train_topic_model.ipynb)
-    - 学習済みモデルは[huggingface]()または[box drive](https://app.box.com/s/emuntfvoapmbw00cey9699p3mfw6arf9)
-    - GPU酷使するので､FastText + Kmeansとかでも良いかも?
-
+        - 学習済みモデルは[huggingface]()または[box drive](https://app.box.com/s/emuntfvoapmbw00cey9699p3mfw6arf9)
 - 実行法
 ~~~
 python integrate_web_dataset.py (データセット名)
@@ -37,7 +35,7 @@ python integrate_web_dataset.py (データセット名)
     - shisa
 
 - [categorized](./data/categorized/)フォルダの中に､jsonlが生成されていきます
-- 並列でも回せます｡(適当にgpuを指定しましょう)
+- 独立プロセスで回せます｡
 ~~~
 
 python integrate_web_dataset.py mc4
@@ -46,7 +44,7 @@ python integrate_web_dataset.py cc100
 python integrate_web_dataset.py shisa
 ~~~
 
-- データがたまったら､dedup
+- データがたまったら､dedup ([参考](./simple_dedup_test.ipynb))
 
 
 # 
