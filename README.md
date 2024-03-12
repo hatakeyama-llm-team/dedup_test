@@ -35,7 +35,7 @@ python integrate_web_dataset.py (データセット名)
     - cc100
     - shisa
 
-- categorizedフォルダの中に､生成されていきます
+- [categorized](./data/categorized/)フォルダの中に､jsonlが生成されていきます
 - 並列でも回せます｡(適当にgpuを指定しましょう)
 ~~~
 
@@ -45,4 +45,4 @@ python integrate_web_dataset.py cc100
 python integrate_web_dataset.py shisa
 ~~~
 
-- データがたまったら､dedupしましょう
+- データがたまったら､dedup
