@@ -22,6 +22,7 @@ make
 - デフォルトでは､Streamingでdownloadする仕様になっています｡
 - ついでに､BERTopicでclassifyもしておきます
     - [こちらのnotebookでモデルはtrainしておきます](./train_topic_model.ipynb)
+    - 学習済みモデルは[box drive]()または[huggingface]()
     - GPU酷使するので､FastText + Kmeansとかでも良いかも?
 
 - 実行法
