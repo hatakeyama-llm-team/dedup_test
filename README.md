@@ -1,5 +1,5 @@
-# Dedup
-# テキストを高速にdedupするコードの例です
+# [Dedup](./simple_dedup_test.ipynb)
+## テキストを高速にdedupするコードの例です
 - [参考](https://github.com/if001/dedup_sentence)
 - [解説](https://zenn.dev/if001/articles/cc262413e69e3d)
 
@@ -16,3 +16,33 @@ make
 ~~~
 
 - [Test code](./simple_dedup_test.ipynb)
+
+# [WebIntegrator](./integrate_web_dataset.py)
+## Web上のCommonCrawl系のtextをjsonlで書き出します
+- デフォルトでは､Streamingでdownloadする仕様になっています｡
+- ついでに､BERTopicでclassifyもしておきます
+    - [こちらのnotebookでモデルはtrainしておきます](integ_web_dataset.ipynb)
+    - GPU酷使するので､FastText + Kmeansとかでも良いかも?
+
+- 実行法
+~~~
+python integrate_web_dataset.py (データセット名)
+~~~
+
+- データセット名: 
+    - mc4
+    - oscar
+    - cc100
+    - shisa
+
+- categorizedフォルダの中に､生成されていきます
+- 並列でも回せます｡(適当にgpuを指定しましょう)
+~~~
+
+python integrate_web_dataset.py mc4
+python integrate_web_dataset.py oscar
+python integrate_web_dataset.py cc100
+python integrate_web_dataset.py shisa
+~~~
+
+- データがたまったら､dedupしましょう
