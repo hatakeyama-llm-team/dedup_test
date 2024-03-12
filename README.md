@@ -21,7 +21,7 @@ make
 ## Web上のCommonCrawl系のtextをjsonlで書き出します
 - デフォルトでは､Streamingでdownloadする仕様になっています｡
 - ついでに､BERTopicでclassifyもしておきます
-    - [こちらのnotebookでモデルはtrainしておきます](integ_web_dataset.ipynb)
+    - [こちらのnotebookでモデルはtrainしておきます](./train_topic_model.ipynb)
     - GPU酷使するので､FastText + Kmeansとかでも良いかも?
 
 - 実行法
@@ -46,3 +46,6 @@ python integrate_web_dataset.py shisa
 ~~~
 
 - データがたまったら､dedup
+
+
+# 
