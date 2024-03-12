@@ -18,11 +18,11 @@ make
 - [Test code](./simple_dedup_test.ipynb)
 
 # [WebIntegrator](./integrate_web_dataset.py)
-## Web上のCommonCrawl系のtextをjsonlで書き出します
+## Web上のCommonCrawl系のtextをjsonlでカテゴライズしながら書き出します
 - デフォルトでは､Streamingでdownloadする仕様になっています｡
 - ついでに､BERTopicでclassifyもしておきます
     - [こちらのnotebookでモデルはtrainしておきます](./train_topic_model.ipynb)
-    - 学習済みモデルは[box drive]()または[huggingface]()
+    - 学習済みモデルは[huggingface]()または[box drive](https://app.box.com/s/emuntfvoapmbw00cey9699p3mfw6arf9)
     - GPU酷使するので､FastText + Kmeansとかでも良いかも?
 
 - 実行法
