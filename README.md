@@ -44,7 +44,7 @@ python integrate_web_dataset.py cc100
 python integrate_web_dataset.py shisa
 ~~~
 
-- データがたまったら､dedupをします
+- データがたまったら､[dedup](./dedup_categorized.py)をします
 ~~~
 python dedup_categorized.py
 ~~~
