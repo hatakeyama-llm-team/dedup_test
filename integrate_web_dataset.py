@@ -6,11 +6,11 @@ from bertopic import BERTopic
 from datasets import load_dataset
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+
+# TODO: マルチプロセスのコードを書いたが､bertopicがCPUで推論してるかも
 streaming = True
 base_dir = "data/categorized"
-# database_name = "mc4"
-# database_nameをコマンドラインで受け取る
-
+length_threshold = 30
 
 # %%
 model_path = "data/topic_model.bin"
@@ -78,7 +78,11 @@ def main():
     futures = []
     with ThreadPoolExecutor(max_workers=5) as executor:
         for doc in dataset:
-            docs.append(doc["text"])
+            text = doc["text"]
+            if len(text) < length_threshold:
+                continue
+
+            docs.append(text)
             if len(docs) == batch_size:
                 # docsのコピーを作成してprocに渡す
                 docs_copy = docs[:]
