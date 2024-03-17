@@ -19,6 +19,7 @@ make
 
 # [WebIntegrator](./integrate_web_dataset.py)
 ## Web上のCommonCrawl系のtextをjsonlでカテゴライズしながら書き出します
+## 24/3/27 [こちら](https://github.com/hatakeyama-llm-team/Dataset_for_BTM)に統合しました(FastTextで高速化 & 細かくバッチ化)。
 - デフォルトでは､Streamingでdownloadする仕様になっています｡
 - ついでに､BERTopicでclassifyもしておきます
     - [こちらのnotebookでモデルはtrainしておきます](./train_topic_model.ipynb)
