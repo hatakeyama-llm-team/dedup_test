@@ -126,3 +126,4 @@ dmypy.json
 data/*
 
 dedup_sentence/
+parsejap2010/data
