@@ -50,4 +50,6 @@ python dedup_categorized.py
 ~~~
 
 
-# 
+# [Japanese2010](./parsejap2010/)
+- [こちら](https://www.s-yata.jp/corpus/nwc2010/)のコーパスを処理するscriptです
+- 「｡」がついてないので､ルールベースでつけていきます.

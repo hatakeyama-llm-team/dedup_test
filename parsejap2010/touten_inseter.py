@@ -2,11 +2,14 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from tqdm import tqdm
-from KenLMPerp import PerplexityChecker
+# from KenLMPerp import PerplexityChecker
 
 
 class Cleaner:
-    def __init__(self, mode="kenlm") -> None:
+    def __init__(self, mode="",
+                 # model_name="fukugawa/transformer-lm-japanese-0.1b",
+                 model_name="llm-jp/llm-jp-1.3b-v1.0",
+                 ) -> None:
         self.mode = mode
         if mode == "kenlm":
             print("kenlm mode")
@@ -16,15 +19,16 @@ class Cleaner:
         else:
             print("llm mode")
             self.tokenizer = AutoTokenizer.from_pretrained(
-                "llm-jp/llm-jp-1.3b-v1.0")
+                model_name
+            )
             self.model = AutoModelForCausalLM.from_pretrained(
-                "llm-jp/llm-jp-1.3b-v1.0",
+                model_name,
                 device_map="auto",
                 # torch_dtype=torch.float32
             )
 
     def __call__(self, text):
-        return self.integrate(text, self.model, self.tokenizer)
+        return self.integrate(text, )
 
     def llm_perplexity(self, text) -> torch.Tensor:
         tokenized_input = self.tokenizer.encode(

@@ -23,6 +23,8 @@ python -m pip install sentencepiece "protobuf<3.20.*"
 sudo apt install build-essential cmake libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
 
 pip install https://github.com/kpu/kenlm/archive/master.zip
+#gccがあたらしいとうまくいかない？？
+
 mkdir -p data/lm_sp
 wget -c  -P data/lm_sp http://dl.fbaipublicfiles.com/cc_net/lm/ja.arpa.bin
 wget -c  -P data/lm_sp http://dl.fbaipublicfiles.com/cc_net/lm/ja.sp.model
