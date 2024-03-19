@@ -17,8 +17,20 @@ make
 
 - [Test code](./simple_dedup_test.ipynb)
 
+
+# [Japanese2010](./parsejap2010/)
+- [こちら](https://www.s-yata.jp/corpus/nwc2010/)のコーパスを処理するscriptです
+- 「｡」がついてないので､ルールベースでつけていきます｡
+  - はじめに､上記webサイトからxzファイルをダウンロードする｡
+  - python load_jap.py を実行
+    - xzファイルを読み込み
+    - テキストを処理
+    - parquetファイルとして書き出し
+
+
 # [WebIntegrator](./integrate_web_dataset.py)
 ## Web上のCommonCrawl系のtextをjsonlでカテゴライズしながら書き出します
+## ボツコードです｡ (BERTOPICが遅い)
 - デフォルトでは､Streamingでdownloadする仕様になっています｡
 - ついでに､BERTopicでclassifyもしておきます
     - [こちらのnotebookでモデルはtrainしておきます](./train_topic_model.ipynb)
@@ -49,7 +61,3 @@ python integrate_web_dataset.py shisa
 python dedup_categorized.py
 ~~~
 
-
-# [Japanese2010](./parsejap2010/)
-- [こちら](https://www.s-yata.jp/corpus/nwc2010/)のコーパスを処理するscriptです
-- 「｡」がついてないので､ルールベースでつけていきます.
