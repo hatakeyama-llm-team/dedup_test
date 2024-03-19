@@ -1,0 +1,1 @@
+huggingface-cli upload --repo-type=dataset japanese2010 ./jap2010_parquet
