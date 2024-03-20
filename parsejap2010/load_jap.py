@@ -6,14 +6,13 @@
 http://www.s-yata.jp/corpus/nwc2010/texts/
 を処理するcode｡
 
-#URLは常時は空いていないので注意｡(畠山が持ってます)
+#URLは常時は空いていないので注意｡
 wget http://www.s-yata.jp/corpus/nwc2010/texts/filelist
 wget -i filelist
 """
 
 # %%
 from datasets import load_dataset
-from Touten import del_kaigyo
 import glob
 import pandas as pd
 import lzma
